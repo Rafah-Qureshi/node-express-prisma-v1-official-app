@@ -9,7 +9,10 @@ datasource db {
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = ["orderByAggregateGroup", "selectRelationCount", "referentialActions"]
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
 }
+
+
 
 model Article {
   id          Int       @id @default(autoincrement())
