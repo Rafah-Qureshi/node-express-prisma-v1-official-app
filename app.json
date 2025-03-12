@@ -1,8 +1,8 @@
 {
-  "name": "RealWorld API",
+  "name": "RealWorld API Demo",
   "description": "Node / Express / Prisma API for RealWorld project",
   "keywords": ["node", "express", "prisma", "realworld"],
-  "website": "https://gothinkster.github.io/realworld/",
+  "website": "https://github.com/Rafah-Qureshi/node-express-prisma-v1-official-app",
   "repository": "https://github.com/Rafah-Qureshi/node-express-prisma-v1-official-app",
   "addons": ["heroku-postgresql"],
   "env": {
