@@ -175,6 +175,10 @@ export const updateUser = async (userPayload: any, loggedInUsername: string) => 
 };
 
 export const findUserIdByUsername = async (username: string) => {
+  if (!username) {
+    throw new HttpException(400, { errors: { username: ["must be provided"] } });
+  }
+
   const user = await prisma.user.findUnique({
     where: {
       username,
