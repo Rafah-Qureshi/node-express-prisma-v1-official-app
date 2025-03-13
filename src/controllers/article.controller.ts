@@ -69,6 +69,7 @@ router.get(
  * @returns article created article
  */
 router.post('/articles', auth.required, async (req: Request, res: Response, next: NextFunction) => {
+  console.log(req?.user);
   try {
     const article = await createArticle(req.body.article, req.user?.username as string);
     res.json({ article });
