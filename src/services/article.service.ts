@@ -183,6 +183,10 @@ export const createArticle = async (article: any, username: string) => {
 
   const user = await findUserIdByUsername(username);
 
+  if (!user) {
+    throw new HttpException(404, { errors: { user: ["not found"] } });
+  }
+  
   const slug = `${slugify(title)}-${user?.id}`;
 
   const existingTitle = await prisma.article.findUnique({
