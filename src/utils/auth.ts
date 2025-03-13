@@ -15,12 +15,14 @@ const auth = {
     secret: process.env.JWT_SECRET || 'superSecret',
     getToken: getTokenFromHeaders,
     algorithms: ['HS256'],
+    requestProperty: "user",
   }),
   optional: jwt({
     secret: process.env.JWT_SECRET || 'superSecret',
     credentialsRequired: false,
     getToken: getTokenFromHeaders,
     algorithms: ['HS256'],
+    requestProperty: "user",
   }),
 };
 
